@@ -10,4 +10,10 @@ add_executable(lab3 main.cpp lab3.cpp lab3.h)
 
 target_link_libraries(lab3)
 
+#file(
+#	COPY ${CMAKE_SOURCE_DIR}/test
+#	DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
+#	PATTERN "*.txt"
+#)
+
 #add_definitions(-DTESTS)

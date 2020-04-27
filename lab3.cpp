@@ -43,39 +43,21 @@ DWORD WINAPI thread_a(LPVOID lpParam) {
 	}
 	
 	// start thread B
-	hThread[1] = CreateThread(
-		NULL,       // default security attributes
-		0,          // default stack size
-		thread_b,
-		NULL,       // no thread function arguments
-		0,          // default creation flags
-		&ThreadID); // receive thread identifier
+	hThread[1] = CreateThread(NULL, 0, thread_b, NULL, 0, &ThreadID); 
 	if (hThread[1] == NULL) {
 		std::cerr << "CreateThread error: " << GetLastError() << '\n';
 		return 1;
 	}
 
 	// start thread C
-	hThread[2] = CreateThread(
-		NULL,       // default security attributes
-		0,          // default stack size
-		thread_c,
-		NULL,       // no thread function arguments
-		0,          // default creation flags
-		&ThreadID); // receive thread identifier
+	hThread[2] = CreateThread(NULL, 0, thread_c, NULL, 0, &ThreadID);
 	if (hThread[2] == NULL) {
 		std::cerr << "CreateThread error: " << GetLastError() << '\n';
 		return 1;
 	}
 
 	// start thread E
-	hThread[4] = CreateThread(
-		NULL,       // default security attributes
-		0,          // default stack size
-		thread_e,
-		NULL,       // no thread function arguments
-		0,          // default creation flags
-		&ThreadID); // receive thread identifier
+	hThread[4] = CreateThread(NULL, 0, thread_e, NULL, 0, &ThreadID);
 	if (hThread[4] == NULL) {
 		std::cerr << "CreateThread error: " << GetLastError() << '\n';
 		return 1;
@@ -146,26 +128,14 @@ DWORD WINAPI thread_e(LPVOID lpParam) {
 	}
 
 	// start thread D
-	hThread[3] = CreateThread(
-		NULL,       // default security attributes
-		0,          // default stack size
-		thread_d,
-		NULL,       // no thread function arguments
-		0,          // default creation flags
-		&ThreadID); // receive thread identifier
+	hThread[3] = CreateThread(NULL, 0, thread_d, NULL, 0, &ThreadID);
 	if (hThread[3] == NULL) {
 		std::cerr << "CreateThread error: " << GetLastError() << '\n';
 		return 1;
 	}
 
 	// start thread G
-	hThread[6] = CreateThread(
-		NULL,       // default security attributes
-		0,          // default stack size
-		thread_g,
-		NULL,       // no thread function arguments
-		0,          // default creation flags
-		&ThreadID); // receive thread identifier
+	hThread[6] = CreateThread(NULL, 0, thread_g, NULL, 0, &ThreadID);
 	if (hThread[6] == NULL) {
 		std::cerr << "CreateThread error: " << GetLastError() << '\n';
 		return 1;
@@ -211,26 +181,14 @@ DWORD WINAPI thread_g(LPVOID lpParam) {
 	}
 
 	// start thread F
-	hThread[5] = CreateThread(
-		NULL,       // default security attributes
-		0,          // default stack size
-		thread_f,
-		NULL,       // no thread function arguments
-		0,          // default creation flags
-		&ThreadID); // receive thread identifier
+	hThread[5] = CreateThread(NULL, 0, thread_f, NULL, 0, &ThreadID);
 	if (hThread[5] == NULL) {
 		std::cerr << "CreateThread error: " << GetLastError() << '\n';
 		return 1;
 	}
 
 	// start thread H
-	hThread[7] = CreateThread(
-		NULL,       // default security attributes
-		0,          // default stack size
-		thread_h,
-		NULL,       // no thread function arguments
-		0,          // default creation flags
-		&ThreadID); // receive thread identifier
+	hThread[7] = CreateThread(NULL, 0, thread_h, NULL, 0, &ThreadID);
 	if (hThread[7] == NULL) {
 		std::cerr << "CreateThread error: " << GetLastError() << '\n';
 		return 1;
@@ -274,13 +232,7 @@ DWORD WINAPI thread_h(LPVOID lpParam) {
 	}
 
 	// start thread I
-	hThread[8] = CreateThread(
-		NULL,       // default security attributes
-		0,          // default stack size
-		thread_i,
-		NULL,       // no thread function arguments
-		0,          // default creation flags
-		&ThreadID); // receive thread identifier
+	hThread[8] = CreateThread(NULL, 0, thread_i, NULL, 0, &ThreadID);
 	if (hThread[8] == NULL) {
 		std::cerr << "CreateThread error: " << GetLastError() << '\n';
 		return 1;
