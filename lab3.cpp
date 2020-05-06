@@ -38,8 +38,8 @@ DWORD WINAPI thread_a(LPVOID lpParam) {
 	for (int i = 0; i < 3; i++) {
 		WaitForSingleObject(hMutex, INFINITE);
 		std::cout << 'a' << std::flush;
-		ReleaseMutex(hMutex);
 		computation();
+		ReleaseMutex(hMutex);
 	}
 	
 	// start thread B
@@ -84,8 +84,8 @@ DWORD WINAPI thread_b(LPVOID lpParam) {
 		WaitForSingleObject(semaphore_b, INFINITE);
 		WaitForSingleObject(hMutex, INFINITE);
 		std::cout << 'b' << std::flush;
-		ReleaseMutex(hMutex);
 		computation();
+		ReleaseMutex(hMutex);
 		ReleaseSemaphore(semaphore_c, 1, NULL);
 	}
 	return 0;
@@ -97,8 +97,8 @@ DWORD WINAPI thread_c(LPVOID lpParam) {
 		WaitForSingleObject(semaphore_c, INFINITE);
 		WaitForSingleObject(hMutex, INFINITE);
 		std::cout << 'c' << std::flush;
-		ReleaseMutex(hMutex);
 		computation();
+		ReleaseMutex(hMutex);
 		ReleaseSemaphore(semaphore_e, 1, NULL);
 	}
 	return 0;
@@ -109,8 +109,8 @@ DWORD WINAPI thread_d(LPVOID lpParam) {
 	for (int i = 0; i < 3; i++) {
 		WaitForSingleObject(hMutex, INFINITE);
 		std::cout << 'd' << std::flush;
-		ReleaseMutex(hMutex);
 		computation();
+		ReleaseMutex(hMutex);
 	}
 	return 0;
 }
@@ -122,8 +122,8 @@ DWORD WINAPI thread_e(LPVOID lpParam) {
 		WaitForSingleObject(semaphore_e, INFINITE);
 		WaitForSingleObject(hMutex, INFINITE);
 		std::cout << 'e' << std::flush;
-		ReleaseMutex(hMutex);
 		computation();
+		ReleaseMutex(hMutex);
 		ReleaseSemaphore(semaphore_b, 1, NULL);
 	}
 
@@ -145,8 +145,8 @@ DWORD WINAPI thread_e(LPVOID lpParam) {
 	for (int i = 0; i < 3; i++) {
 		WaitForSingleObject(hMutex, INFINITE);
 		std::cout << 'e' << std::flush;
-		ReleaseMutex(hMutex);
 		computation();
+		ReleaseMutex(hMutex);
 	}
 
 	// wait thread D
@@ -165,8 +165,8 @@ DWORD WINAPI thread_f(LPVOID lpParam) {
 	for (int i = 0; i < 3; i++) {
 		WaitForSingleObject(hMutex, INFINITE);
 		std::cout << 'f' << std::flush;
-		ReleaseMutex(hMutex);
 		computation();
+		ReleaseMutex(hMutex);
 	}
 	return 0;
 }
@@ -176,8 +176,8 @@ DWORD WINAPI thread_g(LPVOID lpParam) {
 	for (int i = 0; i < 3; i++) {
 		WaitForSingleObject(hMutex, INFINITE);
 		std::cout << 'g' << std::flush;
-		ReleaseMutex(hMutex);
 		computation();
+		ReleaseMutex(hMutex);
 	}
 
 	// start thread F
@@ -198,8 +198,8 @@ DWORD WINAPI thread_g(LPVOID lpParam) {
 	for (int i = 0; i < 3; i++) {
 		WaitForSingleObject(hMutex, INFINITE);
 		std::cout << 'g' << std::flush;
-		ReleaseMutex(hMutex);
 		computation();
+		ReleaseMutex(hMutex);
 	}
 
 	// wait thread F
@@ -211,8 +211,8 @@ DWORD WINAPI thread_g(LPVOID lpParam) {
 	for (int i = 0; i < 3; i++) {
 		WaitForSingleObject(hMutex, INFINITE);
 		std::cout << 'g' << std::flush;
-		ReleaseMutex(hMutex);
 		computation();
+		ReleaseMutex(hMutex);
 	}
 
 	// wait thread H
@@ -227,8 +227,8 @@ DWORD WINAPI thread_h(LPVOID lpParam) {
 	for (int i = 0; i < 3; i++) {
 		WaitForSingleObject(hMutex, INFINITE);
 		std::cout << 'h' << std::flush;
-		ReleaseMutex(hMutex);
 		computation();
+		ReleaseMutex(hMutex);
 	}
 
 	// start thread I
@@ -242,8 +242,8 @@ DWORD WINAPI thread_h(LPVOID lpParam) {
 	for (int i = 0; i < 3; i++) {
 		WaitForSingleObject(hMutex, INFINITE);
 		std::cout << 'h' << std::flush;
-		ReleaseMutex(hMutex);
 		computation();
+		ReleaseMutex(hMutex);
 	}
 	// wait thread I
 	WaitForSingleObject(hThread[8], INFINITE);
@@ -257,8 +257,8 @@ DWORD WINAPI thread_i(LPVOID lpParam) {
 	for (int i = 0; i < 3; i++) {
 		WaitForSingleObject(hMutex, INFINITE);
 		std::cout << 'i' << std::flush;
-		ReleaseMutex(hMutex);
 		computation();
+		ReleaseMutex(hMutex);
 	}
 	return 0;
 }
